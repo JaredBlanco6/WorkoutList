@@ -92,9 +92,9 @@ struct NoCheckBoxMovementView: View{
         HStack{
             Text(movmentObject.name)
                 .frame(width: 190, alignment: .leading)
-            Text(movmentObject.reps + "  x")
+            Text(movmentObject.sets + "  x")
                 .frame(width: 50, alignment: .trailing)
-            Text(movmentObject.sets)
+            Text(movmentObject.reps)
                 .frame(width: 20, alignment: .leading)
         }
     }
