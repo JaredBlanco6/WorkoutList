@@ -74,7 +74,7 @@ for user to reference later
 
 ## Privacy Polocy
 We don't collect any data... but here is the link:
-https://www.privacypolicies.com/live/2ebb1a82-e44b-4460-8cf7-d9eaa022061c
+https://www.privacypolicies.com/live/10420de1-a183-40cf-b48b-b7a31fd3a81e
 
 ## Contact info
 Email: jblanco0110@gmail.com  
