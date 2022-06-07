@@ -26,7 +26,8 @@ workoutHistory.swift
 ## Code layout
 
 [WorkoutTemplate.swift](https://github.com/JaredBlanco6/WorkoutList/blob/main/WorkoutList/Models/WorkoutTemplate.swift) - contains the objects used throuhgout program
-'''
+```swift
+{
 struct Movement: Hashable, Codable {
     var name : String
     var sets: String
