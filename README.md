@@ -1,5 +1,5 @@
-# Welcome to the WorkoutList (To-Do Lift) repository
-All code for the application can be viewed here.
+# Welcome to "To-Do Lift"
+Where you can view, load, and save workouts in a lightweight application. 
 
 
 
@@ -24,7 +24,23 @@ workoutHistory.swift
 - delete past workouts by swiping and tapping 'delete'
 
 ## Code layout
+
+[WorkoutTemplate.swift](https://github.com/JaredBlanco6/WorkoutList/blob/main/WorkoutList/Models/WorkoutTemplate.swift) - contains the objects used throuhgout program
+'''
+struct Movement: Hashable, Codable {
+    var name : String
+    var sets: String
+    var reps: String
+    var weight: String
+}
+'''
+
+
+
 [Contentview.swift](https://github.com/JaredBlanco6/WorkoutList/blob/main/WorkoutList/Views/ContentView.swift) - Project Main
+In this view, 
+
 
 ## Contact info
-For all qustions or improvements: please email jblanco0110@gmail.com
+Email: jblanco0110@gmail.com
+For all emails, please put "ToDoLift" in subject line to get to the corrent inbox
