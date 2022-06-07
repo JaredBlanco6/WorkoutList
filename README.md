@@ -26,15 +26,23 @@ workoutHistory.swift
 ## Code layout
 
 [WorkoutTemplate.swift](https://github.com/JaredBlanco6/WorkoutList/blob/main/WorkoutList/Models/WorkoutTemplate.swift) - contains the objects used throuhgout program
+
+
 ```swift
-{
 struct Movement: Hashable, Codable {
     var name : String
     var sets: String
     var reps: String
     var weight: String
+    
+struct WorkoutTemplate: Hashable, Codable{
+    var name : String
+    var movements: [Movement]
 }
-'''
+```
+These two objects are the backbone of the code. Without workout template containing a name and a list of Movements. 
+An example of a wokroutTemplate be having name refer to "chest day" and the list of movement be any movments that you incorperate in your chest day (IE: [Bench Press, 3, 3, 135])
+
 
 
 
