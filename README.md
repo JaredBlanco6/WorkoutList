@@ -73,7 +73,7 @@ workoutHistory takes our completed workout from workoutList.swift and presents i
 for user to reference later
 
 ## Privacy Polocy
-We don't collect any data... but here is the link:
+We don't collect any data... but here is the link:  
 https://www.privacypolicies.com/live/10420de1-a183-40cf-b48b-b7a31fd3a81e
 
 ## Contact info
