@@ -73,5 +73,5 @@ workoutHistory takes our completed workout from workoutList.swift and presents i
 for user to reference later
 
 ## Contact info
-Email: jblanco0110@gmail.com
+Email: jblanco0110@gmail.com  
 For all emails, please put "ToDoLift" in subject line to get to the corrent inbox
