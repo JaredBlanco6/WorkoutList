@@ -23,8 +23,8 @@ workoutHistory.swift
 - click to exapand the workout to see all movements, sets, reps, and weights completed
 - delete past workouts by swiping and tapping 'delete'
 
-### Code layout
+## Code layout
+[WorkoutList/WorkoutList/Views/ContentView.swift](https://github.com/JaredBlanco6/WorkoutList/blob/main/WorkoutList/Views/ContentView.swift] - Project Main
 
-
-### Contact info
+## Contact info
 For all qustions or improvements: please email jblanco0110@gmail.com
