@@ -43,11 +43,20 @@ struct WorkoutTemplate: Hashable, Codable{
 These two objects are the backbone of the code. Without workout template containing a name and a list of Movements. 
 An example of a wokroutTemplate be having name refer to "chest day" and the list of movement be any movments that you incorperate in your chest day (IE: [Bench Press, 3, 3, 135])
 
-
+[dataManager.swift](https://github.com/JaredBlanco6/WorkoutList/blob/main/WorkoutList/Models/dataManager.swift) - holds all save and load functions for "movementList", "WorkoutList", and pastWorkouts"
 
 
 [Contentview.swift](https://github.com/JaredBlanco6/WorkoutList/blob/main/WorkoutList/Views/ContentView.swift) - Project Main
-In this view, 
+Main view of program uses a tabview to connect workoutList.swift, workoutLoader.swift, and workoutHistory.swift
+
+[WorkoutList.swift](https://github.com/JaredBlanco6/WorkoutList/blob/main/WorkoutList/Views/WorkoutList.swift) - To-Do list view
+View that presents list of movements named "movementsList" in a to-do list like format. 
+Inside the list, we can:
+- check movements as complete
+- delete movements from list with swipe
+- access the moreInfoView with swipe
+    
+
 
 
 ## Contact info
