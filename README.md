@@ -26,8 +26,6 @@ workoutHistory.swift
 ## Code layout
 
 [WorkoutTemplate.swift](https://github.com/JaredBlanco6/WorkoutList/blob/main/WorkoutList/Models/WorkoutTemplate.swift) - contains the objects used throuhgout program
-
-
 ```swift
 struct Movement: Hashable, Codable {
     var name : String
@@ -45,7 +43,6 @@ An example of a wokroutTemplate be having name refer to "chest day" and the list
 
 [dataManager.swift](https://github.com/JaredBlanco6/WorkoutList/blob/main/WorkoutList/Models/dataManager.swift) - holds all save and load functions for "movementList", "WorkoutList", and pastWorkouts"
 
-
 [Contentview.swift](https://github.com/JaredBlanco6/WorkoutList/blob/main/WorkoutList/Views/ContentView.swift) - Project Main
 Main view of program uses a tabview to connect workoutList.swift, workoutLoader.swift, and workoutHistory.swift
 
@@ -55,9 +52,25 @@ Inside the list, we can:
 - check movements as complete
 - delete movements from list with swipe
 - access the moreInfoView with swipe
-    
 
+[moreInfoView.swift](https://github.com/JaredBlanco6/WorkoutList/blob/main/WorkoutList/Views/moreInfoView.swift) - more info for movements in workoutList.swift
+moreInfoView is a supporting view to the workoutList.swift. In this view, we give the user the ability to
+add weight used on their movement as well as the ability to edit the existing movement object.
 
+[workoutLoader.swift](https://github.com/JaredBlanco6/WorkoutList/blob/main/WorkoutList/Views/workoutLoader.swift) - where we can load workout tempates to to-do list
+WorkoutLoader is a support element to workoutList. This file uses the workoutTemplate object that is located
+in workoutTemplate.swift. In this file we present the user with the sotred list of workouTemplates named "workoutList"
+ 
+In additon, we can delete workoutTemplates and have a navigtion link to the newWorkoutView.swift where we can
+add a new workoutTemplate object to our list "workoutList"
+
+[newWorkoutView.swift](https://github.com/JaredBlanco6/WorkoutList/blob/main/WorkoutList/Views/newWorkoutView.swift) - for adding workouts to workoutList
+newWoroutView is a pop up screen that is accessed from workoutLoader. This screen allows user to create a
+new workoutTemplate object and add it to the workoutList.
+
+[workoutHistory.swift](https://github.com/JaredBlanco6/WorkoutList/blob/main/WorkoutList/Views/workoutHistory.swift) - shows completed workouts
+workoutHistory takes our completed workout from workoutList.swift and presents it with the day completed
+for user to reference later
 
 ## Contact info
 Email: jblanco0110@gmail.com
