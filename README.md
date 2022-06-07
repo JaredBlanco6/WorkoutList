@@ -72,6 +72,10 @@ new workoutTemplate object and add it to the workoutList.
 workoutHistory takes our completed workout from workoutList.swift and presents it with the day completed
 for user to reference later
 
+## Privacy Polocy
+We don't collect any data... but here is the link:
+https://www.privacypolicies.com/live/2ebb1a82-e44b-4460-8cf7-d9eaa022061c
+
 ## Contact info
 Email: jblanco0110@gmail.com  
 For all emails, please put "ToDoLift" in subject line to get to the corrent inbox
