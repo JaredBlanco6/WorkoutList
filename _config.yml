@@ -1,4 +1,5 @@
 theme: jekyll-theme-minimal
-title: [To-Do Fitness]
-description: [A short description of your site's purpose]
+title: [To-Do Lift]
+description: [To-Do Lift is an application made for athletes who want a simple view for their current workout,
+as well as wanting to be able to save workouts, and track progress.]
 logo: WorkoutList/Assets.xcassets/logo.imageset/Picture1.png
