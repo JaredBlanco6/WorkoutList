@@ -24,7 +24,7 @@ workoutHistory.swift
 - delete past workouts by swiping and tapping 'delete'
 
 ## Code layout
-[Contentview.swift](WorkoutList/WorkoutList/Views/ContentView.swift]) - Project Main
+[Contentview.swift](WorkoutList/WorkoutList/Views/ContentView.swift) - Project Main
 
 ## Contact info
 For all qustions or improvements: please email jblanco0110@gmail.com
