@@ -56,6 +56,7 @@ struct WorkoutLoader: View {
                     LazyVGrid(columns: items, spacing: 10, pinnedViews: [.sectionHeaders]){
                         // for each workout in our list, we present it in view WorkoutTemplateViewer
                         ForEach(workoutList, id: \.self) { work in
+                            //OptimizedWorkoutTemplateViewer(workoutVariable: work, movementList: $movementList, editMode: $editMode, workoutList: $workoutList, selectedView: $selectedView)
                             WorkoutTemplateViewer(workoutVariable: work, movementList: $movementList, editMode: $editMode, workoutList: $workoutList, selectedView: $selectedView)
                         }
                     }
@@ -121,7 +122,6 @@ struct WorkoutLoaderHeaderView: View{
             }
 
         }.frame(minWidth: 300, maxWidth: .infinity, maxHeight: 15)
-            .background(Color.blue)
             .padding()
             .foregroundColor(.white)
             .background(.blue)
@@ -164,7 +164,6 @@ struct addOrEditButtonView: View{
                     .foregroundColor(.black)
                     .background(Color.white)
                     .clipShape(RoundedRectangle(cornerRadius: 40))
-                    .shadow(color: Color.black.opacity(0.25), radius: 6)
             }
         // if we are in edit mode we can delete the workout
         }else{
@@ -182,7 +181,6 @@ struct addOrEditButtonView: View{
                     .foregroundColor(.black)
                     .background(Color.red)
                     .clipShape(RoundedRectangle(cornerRadius: 40))
-                    .shadow(color: Color.black.opacity(0.25), radius: 6)
             }
         }
     }
@@ -208,14 +206,12 @@ struct WorkoutTemplateViewer: View{
             ZStack{
                 RoundedRectangle(cornerRadius: 40)
                     .fill(Color.black)
-                    .clipShape(RoundedRectangle(cornerRadius: 60))
                     .frame(width: 125, height: 35)
                     .padding(.top, 10)
                    
                 HStack{
                     Text(workoutVariable.name)
                         .font(.headline)
-                        .multilineTextAlignment(.center)
                         .foregroundColor(Color.white)
                         .frame(width: 70, height: 18)
                     
@@ -224,23 +220,20 @@ struct WorkoutTemplateViewer: View{
 
                 }.padding(.top, 10)
             }
+            
+            
 
             // just lists all movments, sets, and reps in the workout
             ForEach(workoutVariable.movements, id: \.self) { lift in
                 HStack{
-                    Text("   -" + lift.name + ":")
+                    Text(" -\(lift.name) :")
                         .font(.caption)
                         .lineLimit(1)
-                    Text(lift.sets)
-                        .font(.caption)
-                        .multilineTextAlignment(.trailing)
-                    Text("x")
-                        .font(.caption)
-                        .multilineTextAlignment(.trailing)
-                    Text(lift.reps)
-                        .font(.caption)
-                        .frame(alignment: .trailing)
+                    
                     Spacer()
+                    
+                    Text("\(lift.sets) x \(lift.reps)  ")
+                        .font(.caption)
                 }
             }
             Spacer()
@@ -248,7 +241,60 @@ struct WorkoutTemplateViewer: View{
         .frame(minWidth: 140, maxWidth: 140, minHeight: 160, maxHeight: .infinity, alignment: .topTrailing)
         .background(RoundedRectangle(cornerRadius: 30, style: .continuous)
             .fill(.blue))
-        .shadow(color: Color.black.opacity(0.25), radius: 6)
+    }
+}
+
+// contains the square object shown on screen in lazy grid
+struct OptimizedWorkoutTemplateViewer: View{
+    // one element from list of workouts
+    var workoutVariable : WorkoutTemplate
+    // primary list on first page
+    @Binding var movementList: [Movement]
+    
+    @Binding var editMode: Bool;
+    
+    @Binding var workoutList: [WorkoutTemplate]
+    
+    // allows me to launch other screens from buttons
+    @Binding var selectedView: Int
+    
+    var body: some View {
+        VStack{
+            HStack{
+                Text(workoutVariable.name)
+                    .font(.headline)
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(Color.black)
+                    .frame(width: 70, height: 18)
+                
+                Spacer()
+                
+                // button that can either add wrokout to movementList or delete the workout from workoutList
+                addOrEditButtonView(workoutList: $workoutList, editMode: $editMode, workoutVariable: workoutVariable, movementList: $movementList, selectedView: $selectedView)
+                
+            }.frame(maxWidth: 80, maxHeight: 30, alignment: .topTrailing)
+                .padding(.top, 20)
+            
+            Divider()
+            
+            // just lists all movments, sets, and reps in the workout
+            ForEach(workoutVariable.movements, id: \.self) { lift in
+                HStack{
+                    Text("  " + lift.name)
+                        .font(.caption)
+                        .foregroundColor(Color.gray)
+                        .lineLimit(1)
+                        
+
+                    Spacer()
+                }
+            }
+            
+            Spacer()
+        }
+        .frame(minWidth: 140, maxWidth: 140, minHeight: 160, maxHeight: .infinity, alignment: .topTrailing)
+        .background(RoundedRectangle(cornerRadius: 30, style: .continuous).fill(.blue)
+        )
     }
 }
 
