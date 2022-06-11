@@ -244,11 +244,7 @@ struct workoutButtonsView: View{
             // complete workout that saves the current workout to pastWorkouts
             Button {
                 let date = Date()
-                let dateFormatter = DateFormatter()
-                dateFormatter.dateStyle = .full
-                let name = String(dateFormatter.string(from: date))
-                
-                pastWorkouts.insert(WorkoutTemplate(name: name, movements: movementList), at: 0)
+                pastWorkouts.insert(WorkoutTemplate(name: String(date.formatted(date: .complete, time: .omitted)), movements: movementList), at: 0)
                 savePastWorkouts(pastWorkouts: pastWorkouts)
                 selectedView = 3
             } label: {

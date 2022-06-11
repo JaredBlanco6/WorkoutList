@@ -103,33 +103,6 @@ func loadPastWorkouts()->[WorkoutTemplate]{
         }
     }
     
-    
-    tempPastWorkoutList = [WorkoutTemplate(name: "Saturday, June 4, 2022", movements: [
-        Movement(name: "Squats", sets: "4", reps: "5", weight: "225"),
-        Movement(name: "Deadlift", sets: "2", reps: "6", weight: "275"),
-        Movement(name: "Leg Extension", sets: "3", reps: "15", weight: "50"),
-        Movement(name: "Leg Curls", sets: "3", reps: "15", weight: "50"),
-        Movement(name: "Calf Raises", sets: "3", reps: "10", weight: "90")]),
-    WorkoutTemplate(name: "Friday, June 3, 2022", movements: [
-        Movement(name: "Pull ups", sets: "3", reps: "12", weight: "0"),
-        Movement(name: "Barbell Rows", sets: "3", reps: "12", weight: "0"),
-        Movement(name: "Cable Seated Rows", sets: "3", reps: "12", weight: "0"),
-        Movement(name: "Cable Reverse Flys", sets: "3", reps: "12", weight: "0"),
-        Movement(name: "Reverse Grip Lat Pull Down", sets: "3", reps: "12", weight: "0"),
-        Movement(name: "Dumbell Shrugs", sets: "3", reps: "12", weight: "0") ]),
-    WorkoutTemplate(name: "Thursday, June 2, 2022", movements: [
-        Movement(name: "Barbell Bench Press", sets: "3", reps: "4", weight: "0"),
-        Movement(name: "DB Incline Bench press",sets: "3", reps: "10", weight: "0"),
-        Movement(name: "DB Flys",sets: "3", reps: "15", weight: "0"),
-        Movement(name: "Weighted Dips",sets: "3", reps: "10", weight: "0")]),
-    WorkoutTemplate(name: "Wednesday, June 1, 2022", movements: [
-        Movement(name: "Squats", sets: "4", reps: "5", weight: "0"),
-        Movement(name: "Deadlift", sets: "2", reps: "6", weight: "0"),
-        Movement(name: "Leg Extension", sets: "3", reps: "15", weight: "0"),
-        Movement(name: "Leg Curls", sets: "3", reps: "15", weight: "0"),
-        Movement(name: "Calf Raises", sets: "3", reps: "10", weight: "0")])
-    ]
-    
     return tempPastWorkoutList
 }
 

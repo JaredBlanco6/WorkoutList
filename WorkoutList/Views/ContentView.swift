@@ -35,25 +35,32 @@ struct ContentView: View {
     // selectedView is used in the tab view to choose which display is shown, edited in workoutList and workoutLoader
     @State var selectedView = 1
 
-    
+
     var body: some View {
         TabView(selection: $selectedView) {
             // displays the movement list and can add movments
             WorkoutList(movementList: $movementList, pastWorkouts: $pastWorkouts, selectedView: $selectedView)
-                .tabItem{Image(systemName: "wallet.pass.fill")}
+                .tabItem{Image(systemName: "checklist")}
                 .tag(1)
                 .preferredColorScheme(.light)
                 
             // adds movments to the workoutList
             WorkoutLoader(movementList: $movementList, workoutList: $workoutList, selectedView: $selectedView)
-                .tabItem{Image(systemName: "doc.on.doc")}
+                .tabItem{Image(systemName: "wallet.pass.fill")}
                 .tag(2)
                 .preferredColorScheme(.light)
             
-            workoutHistory(pastWorkouts: $pastWorkouts)
-                .tabItem{Image(systemName: "folder.fill")}
+
+            workoutHistory(pastWorkouts: $pastWorkouts, selectedView: $selectedView)
+                .tabItem{Image(systemName: "calendar")}
                 .tag(3)
                 .preferredColorScheme(.light)
+ 
+
+            
+            
+            
+            
         }
     }
 }
